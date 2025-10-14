@@ -8,7 +8,7 @@ app.use(express.static("public"))
 
 
 app.listen(PORT, () => {
-  console.log(`server runs on port: ${PORT}`)
+  console.log(`servers runs on port: ${PORT}`)
 })
 
 

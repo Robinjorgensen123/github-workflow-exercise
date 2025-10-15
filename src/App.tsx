@@ -4,7 +4,7 @@
 
 const App = () => (
   <main>
-    <p>Todo Apps</p>
+    <p>Todo Appss</p>
   </main>
 )
 

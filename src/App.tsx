@@ -1,6 +1,6 @@
 const App = () => (
   <main>
-    <p>Todo Appss</p>
+    <p>Todo Appsss</p>
   </main>
 );
 

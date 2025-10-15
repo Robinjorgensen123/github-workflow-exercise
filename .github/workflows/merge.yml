@@ -1,4 +1,4 @@
-name: Enforce dev → main
+name: Enforce dev to main
 
 on:
   pull_request:
@@ -6,17 +6,14 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
 
 jobs:
-  allow-only-dev:
+  only-dev-to-main:
     runs-on: ubuntu-latest
     steps:
-      
-     - name: allow only dev → main
-       run: |
-        echo "PR: ${{
-          github.head_ref}}  →  ${{
-          github.base_ref}}"
-        if [ "${{ github.head_ref }}" != "dev" ]; then
-          echo " Endast merges från 'dev' till 'main' är tillåtna."
-          exit 1
-        fi
-        echo "✅ OK: PR kommer från 'dev'."
+      - name: Allow only dev -> main
+        run: |
+          echo "PR: ${{ github.head_ref }} -> ${{ github.base_ref }}"
+          if [ "${{ github.head_ref }}" != "dev" ]; then
+            echo "Only merges from 'dev' to 'main' are allowed."
+            exit 1
+          fi
+          echo "OK"

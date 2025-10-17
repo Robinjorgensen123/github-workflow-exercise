@@ -3,6 +3,7 @@ const App = () => (
     <p>Todo hahahahha</p>
     <p>testar</p>
     <p>testar lite till</p>
+    <p>admin</p>
   </main>
 );
 
